@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import ButtonArrow from "./ButtonArrow";
 
 function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -25,14 +26,21 @@ function Hero() {
   }, []);
 
   return (
-    <div className="border p-8">
-      <div ref={imageRef}>
+    <div className="p-8">
+      <div ref={imageRef} className="relative w-full h-[300px] md:h-[500px]">
         <Image
           src={"/images/homepage/mobile/image-homepage-hero@2x.jpg"}
-          height={271}
-          width={311}
+          layout="fill"
+          objectFit="cover"
           alt="alt"
-          className="mx-auto mt-2"
+          className="md:hidden"
+        />
+        <Image
+          src={"/images/homepage/tablet/image-homepage-hero@2x.jpg"}
+          layout="fill"
+          objectFit="cover"
+          alt="alt"
+          className="hidden md:block"
         />
       </div>
       <h1
@@ -41,6 +49,11 @@ function Hero() {
       >
         Hey, I’m Daniel Okafor and I love building beautiful websites
       </h1>
+
+      <button className="bg-[#203A4C] mt-8 hover:bg-[#5FB4A2] w-[200px] h-12 flex items-center text-white text-xs tracking-[2px] cursor-pointer">
+        <ButtonArrow />
+        <p className="w-full">ABOUT ME</p>
+      </button>
     </div>
   );
 }

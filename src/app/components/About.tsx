@@ -1,13 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RegularButton from "./RegularButton";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function About() {
+  const aboutRef = useRef<HTMLDivElement>(null);
   const [mobile, setMobile] = React.useState<string | null>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const width = window.innerWidth;
     if (width <= 768) {
       setMobile("mobile");
@@ -17,10 +22,33 @@ export default function About() {
       setMobile("desktop");
     }
   }, []);
-  // const mobile = width <= 768 ? "mobile" : width <= 1024 ? "tablet" : "desktop";
+
+  useEffect(() => {
+    const aboutElement = aboutRef.current;
+
+    gsap.fromTo(
+      aboutElement,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: aboutElement,
+          start: "top 80%", // Start animation when the top of the element is 80% down the viewport
+          end: "bottom 60%", // End animation when the bottom of the element is 60% down the viewport
+          toggleActions: "play none none reverse", // Play animation on scroll down, reverse on scroll up
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div className="px-8 flex flex-col max-w-[1110px] mx-auto md:flex-row md:items-start md:justify-between lg:px-0 lg:justify-start lg:gap-[125px] border">
+    <div
+      ref={aboutRef}
+      className="px-8 mt-24 flex flex-col md:flex-row md:items-start md:justify-between lg:mt-[153px] lg:px-[165px] lg:justify-start lg:gap-[80px]"
+    >
       {/* My Image */}
       <Image
         src={`/images/homepage/mobile/image-homepage-profile@2x.jpg`}
@@ -44,7 +72,7 @@ export default function About() {
         className="hidden lg:block h-auto w-auto mt-20 md:mt-0"
       />
 
-      <div className=" md:w-[339px]">
+      <div className="md:w-[339px] lg:w-[350px]">
         {/* Horizontal Line */}
         <div className="bg-[#33323D]/20 h-[1px] w-full mt-8 md:mt-0" />
 
@@ -64,7 +92,7 @@ export default function About() {
         </p>
 
         <RegularButton
-          className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] mt-6 w-fit"
+          className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] mt-6 w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
           children={"GO TO PORTFOLIO"}
           type="button"
         />

@@ -23,7 +23,7 @@ export default function LinkedinIcon({
         height={height}
         viewBox="0 0 24 24"
         fill="none"
-        className={`cursor-pointer ${className}`}
+        className={`cursor-pointer transition-colors ${className}`}
         style={{ fill: hoverColor }}
         onMouseEnter={() => setHoverColor("#5FB4A2")}
         onMouseLeave={() => setHoverColor(color)}

@@ -43,7 +43,7 @@ function Header() {
   }, [isMenuOpen]);
 
   return (
-    <div className="relative flex items-center justify-between p-8">
+    <div className="relative flex items-center justify-between p-8 lg:px-[165px]">
       <Logo width={60.082} height={32} color="#33323D" />
       <Hamburger
         className="md:hidden cursor-pointer"

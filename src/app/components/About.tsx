@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RegularButton from "./RegularButton";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +48,7 @@ export default function About() {
   return (
     <div
       ref={aboutRef}
-      className="px-8 mt-24 flex flex-col md:flex-row md:items-start md:justify-between lg:mt-[153px] lg:px-[165px] lg:justify-start lg:gap-[80px]"
+      className="px-8 mt-24 flex flex-col md:flex-row md:items-start md:justify-between lg:mt-[153px] lg:px-[165px] lg:justify-start lg:gap-[80px] "
     >
       {/* My Image */}
       <Image
@@ -72,11 +73,8 @@ export default function About() {
         className="hidden lg:block h-auto w-auto mt-20 md:mt-0"
       />
 
-      <div className="md:w-[339px] lg:w-[350px]">
-        {/* Horizontal Line */}
-        <div className="bg-[#33323D]/20 h-[1px] w-full mt-8 md:mt-0" />
-
-        <h2 className="heading mt-8 text-[#33323D] text-[40px] font-bold leading-[42px] tracking-[-0.357px]">
+      <div className="md:w-[339px] lg:w-[350px] border border-[#33323D]/15 border-r-0 border-l-0 mt-8 pt-8 pb-[51px]">
+        <h2 className="heading text-[#33323D] text-[40px] font-bold leading-[42px] tracking-[-0.357px]">
           About Me
         </h2>
 
@@ -91,11 +89,13 @@ export default function About() {
           run or cycling. I’d love you to check out my work.
         </p>
 
-        <RegularButton
-          className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] mt-6 w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
-          children={"GO TO PORTFOLIO"}
-          type="button"
-        />
+        <Link href={"/portfolio"}>
+          <RegularButton
+            className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] mt-6 w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
+            children={"GO TO PORTFOLIO"}
+            type="button"
+          />
+        </Link>
       </div>
     </div>
   );

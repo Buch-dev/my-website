@@ -57,7 +57,7 @@ function Header() {
           HOME
         </Link>
         <Link
-          href={"/about"}
+          href={"/portfolio"}
           className="text-[#33323D] text-xs font-normal tracking-[2px] leading-0.5 hover:text-[#5FB4A2] transition-colors"
         >
           PORTFOLIO

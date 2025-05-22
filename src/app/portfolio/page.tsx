@@ -10,7 +10,7 @@ import CTA from "../components/CTA";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function page() {
+function PortfolioPage() {
   const portfolioRef = useRef<HTMLDivElement>(null);
 
   const portfolioData = [
@@ -50,7 +50,6 @@ function page() {
 
   useEffect(() => {
     const portfolioElements = portfolioRef.current?.querySelectorAll(".portfolio-item");
-
     if (portfolioElements) {
       portfolioElements.forEach((item) => {
         gsap.fromTo(
@@ -62,10 +61,10 @@ function page() {
             duration: 1,
             ease: "power3.out",
             scrollTrigger: {
-              trigger: item, // Trigger animation for each item individually
-              start: "top 80%", // Start animation when the top of the item is 80% down the viewport
-              end: "bottom 20%", // End animation when the bottom of the item is 20% down the viewport
-              toggleActions: "play none none reverse", // Play animation on scroll down, reverse on scroll up
+              trigger: item,
+              start: "top 80%",
+              end: "bottom 20%",
+              toggleActions: "play none none reverse",
             },
           }
         );
@@ -88,6 +87,9 @@ function page() {
               src={data.imageUrl}
               alt={data.title}
               className="md:hidden"
+              priority
+              sizes="(max-width: 768px) 311px, (max-width: 1024px) 339px, 540px"
+              style={{ borderRadius: "12px" }}
             />
             <Image
               width={339}
@@ -95,6 +97,9 @@ function page() {
               src={data.imageUrl}
               alt={data.title}
               className="hidden md:block lg:hidden"
+              priority
+              sizes="(max-width: 1024px) 339px, 540px"
+              style={{ borderRadius: "12px" }}
             />
             <Image
               width={540}
@@ -102,6 +107,9 @@ function page() {
               src={data.desktopImageUrl}
               alt={data.title}
               className="hidden lg:block"
+              priority
+              sizes="540px"
+              style={{ borderRadius: "12px" }}
             />
 
             <div className="flex flex-col gap-6 md:gap-0 mt-8 md:mt-0">
@@ -113,9 +121,9 @@ function page() {
               <p className="text-[#33323D] text-[15px] leading-[30px] md:mt-[29px] lg:mt-7">
                 {data.description}
               </p>
-              <Link href={`/portfolio/${data.id}`}>
+              <Link href={`/portfolio/${data.id}`} className="w-fit md:mt-[35px] lg:mt-6" aria-label={`View project: ${data.title}`}>
                 <RegularButton
-                  className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors md:mt-[35px] lg:mt-6"
+                  className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
                   children={"VIEW PROJECT"}
                   type="button"
                 />
@@ -131,4 +139,4 @@ function page() {
   );
 }
 
-export default page;
+export default PortfolioPage;

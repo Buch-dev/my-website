@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 import GithubIcon from "./GithubIcon";

@@ -190,11 +190,11 @@ function ContactPage() {
               {errors.message && <p id="message-error" className="text-red-500 text-[13px]">{errors.message}</p>}
             </div>
             <RegularButton
-              children={loading ? "Sending..." : "SEND MESSAGE"}
+              aria-label="Send message"
               type="submit"
               className="bg-[#203A4C] text-white w-[200px] h-12 text-xs tracking-[2px] cursor-pointer disabled:opacity-60"
               disabled={loading}
-            />
+            >{loading ? "Sending..." : "SEND MESSAGE"}</RegularButton>
             {success && (
               <p className={`text-[15px] mt-2 ${success.includes("successfully") ? "text-green-600" : "text-red-500"}`}>
                 {success}

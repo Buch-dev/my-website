@@ -123,9 +123,10 @@ export default function About() {
         >
           <RegularButton
             className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
-            children="GO TO PORTFOLIO"
             type="button"
-          />
+          >
+            GO TO PORTFOLIO
+          </RegularButton>
         </Link>
       </div>
     </section>

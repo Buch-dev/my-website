@@ -49,9 +49,9 @@ export default function CTA() {
         <Link href={"/contact"}>
           <RegularButton
             className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
-            children={"CONTACT ME"}
+            aria-label="Contact me"
             type="button"
-          />
+          >CONTACT ME</RegularButton>
         </Link>
       </div>
     </div>

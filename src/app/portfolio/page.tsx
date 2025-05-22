@@ -20,7 +20,8 @@ function PortfolioPage() {
       description:
         "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
       imageUrl: "/images/portfolio/tablet/image-portfolio-manage@2x.jpg",
-      desktopImageUrl: "/images/portfolio/desktop/image-portfolio-manage@2x.jpg",
+      desktopImageUrl:
+        "/images/portfolio/desktop/image-portfolio-manage@2x.jpg",
     },
     {
       id: "2",
@@ -28,7 +29,8 @@ function PortfolioPage() {
       description:
         "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
       imageUrl: "/images/portfolio/tablet/image-portfolio-bookmark@2x.jpg",
-      desktopImageUrl: "/images/portfolio/desktop/image-portfolio-bookmark@2x.jpg",
+      desktopImageUrl:
+        "/images/portfolio/desktop/image-portfolio-bookmark@2x.jpg",
     },
     {
       id: "3",
@@ -36,7 +38,8 @@ function PortfolioPage() {
       description:
         "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
       imageUrl: "/images/portfolio/tablet/image-portfolio-insure@2x.jpg",
-      desktopImageUrl: "/images/portfolio/desktop/image-portfolio-insure@2x.jpg",
+      desktopImageUrl:
+        "/images/portfolio/desktop/image-portfolio-insure@2x.jpg",
     },
     {
       id: "4",
@@ -49,7 +52,8 @@ function PortfolioPage() {
   ];
 
   useEffect(() => {
-    const portfolioElements = portfolioRef.current?.querySelectorAll(".portfolio-item");
+    const portfolioElements =
+      portfolioRef.current?.querySelectorAll(".portfolio-item");
     if (portfolioElements) {
       portfolioElements.forEach((item) => {
         gsap.fromTo(
@@ -121,12 +125,17 @@ function PortfolioPage() {
               <p className="text-[#33323D] text-[15px] leading-[30px] md:mt-[29px] lg:mt-7">
                 {data.description}
               </p>
-              <Link href={`/portfolio/${data.id}`} className="w-fit md:mt-[35px] lg:mt-6" aria-label={`View project: ${data.title}`}>
+              <Link
+                href={`/portfolio/${data.id}`}
+                className="w-fit md:mt-[35px] lg:mt-6"
+                aria-label={`View project: ${data.title}`}
+              >
                 <RegularButton
                   className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
-                  children={"VIEW PROJECT"}
                   type="button"
-                />
+                >
+                  VIEW PROJECT
+                </RegularButton>
               </Link>
               {/* Horizontal Line */}
               <div className="hidden md:block bg-[#33323D]/20 h-[1px] w-full md:mt-[50px] lg:mt-[103px]" />

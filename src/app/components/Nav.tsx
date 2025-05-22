@@ -83,7 +83,7 @@ function Header() {
           HOME
         </Link>
         <Link
-          href={"/about"}
+          href={"/portfolio"}
           className="text-white text-lg font-bold tracking-[2px] hover:text-[#5FB4A2] transition-colors"
           onClick={() => setIsMenuOpen(false)}
         >

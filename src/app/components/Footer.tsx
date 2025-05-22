@@ -65,9 +65,15 @@ export default function Footer() {
       </div>
 
       <div className="flex w-[104px] justify-between items-center">
-        <GithubIcon />
-        <TwitterIcon />
-        <LinkedinIcon />
+        <Link href={"https://github.com/Buch-dev"}>
+          <GithubIcon />
+        </Link>
+        <Link href={"https://twitter.com/bucheed"}>
+          <TwitterIcon />
+        </Link>
+        <Link href={"https://www.linkedin.com/in/buchcodx/"}>
+          <LinkedinIcon />
+        </Link>
       </div>
     </div>
   );

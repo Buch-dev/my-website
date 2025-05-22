@@ -101,7 +101,7 @@ function ContactPage() {
             </p>
             <nav className="flex w-[104px] justify-between items-center" aria-label="Social links">
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/Buch-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -109,7 +109,7 @@ function ContactPage() {
                 <GithubIcon color="#33323D" />
               </Link>
               <Link
-                href="https://twitter.com/yourusername"
+                href="https://twitter.com/bucheed"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
@@ -117,7 +117,7 @@ function ContactPage() {
                 <TwitterIcon color="#33323D" />
               </Link>
               <Link
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/buchcodx/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

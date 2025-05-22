@@ -64,7 +64,6 @@ function Hero() {
             <p className="w-full">ABOUT ME</p>
           </button>
         </div>
-
       </div>
       {/* Heading and text and button */}
       <div className="bg-white md:hidden">
@@ -75,7 +74,15 @@ function Hero() {
           Hey, I’m Daniel Okafor and I love building beautiful websites
         </h1>
 
-        <button className="bg-[#203A4C] mt-8 hover:bg-[#5FB4A2] w-[200px] h-12 flex items-center text-white text-xs tracking-[2px] cursor-pointer">
+        <button
+          className="bg-[#203A4C] mt-8 hover:bg-[#5FB4A2] w-[200px] h-12 flex items-center text-white text-xs tracking-[2px] cursor-pointer"
+          onClick={() => {
+            const aboutSection = document.getElementById("about-section");
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
           <ButtonArrow />
           <p className="w-full">ABOUT ME</p>
         </button>

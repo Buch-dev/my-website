@@ -8,7 +8,6 @@ import LinkedinIcon from "../components/LinkedinIcon";
 import RegularButton from "../components/RegularButton";
 import Link from "next/link";
 
-
 function ContactPage() {
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
@@ -18,9 +17,9 @@ function ContactPage() {
     e.preventDefault();
     setSuccess(null);
     const form = e.target as HTMLFormElement;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
+    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value.trim() || "";
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value.trim() || "";
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value.trim() || "";
 
     const newErrors = { name: "", email: "", message: "" };
     let hasError = false;

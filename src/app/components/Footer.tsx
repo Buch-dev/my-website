@@ -50,7 +50,7 @@ export default function Footer() {
             HOME
           </Link>
           <Link
-            href={"/about"}
+            href={"/portfolio"}
             className="text-white text-xs tracking-[2px] hover:text-[#5FB4A2] transition-colors"
           >
             PORTFOLIO

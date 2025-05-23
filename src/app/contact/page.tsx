@@ -84,10 +84,10 @@ function ContactPage() {
       </Head>
       <main className="flex flex-col gap-8 px-8 lg:px-[165px] md:mt-[62px]">
         <section className="flex flex-col gap-6 border border-[#33323D]/15 border-r-0 border-l-0 mt-8 pt-8 pb-[51px] lg:flex-row">
-          <h2 className="heading text-[#33323D] text-[40px] font-bold leading-[42px] tracking-[-0.357px] w-[45%]">
+          <h2 className="heading text-[#33323D] text-[40px] font-bold leading-[42px] tracking-[-0.357px] md:w-[45%]">
             Get in Touch
           </h2>
-          <div className="flex flex-col gap-6 w-[55%]">
+          <div className="flex flex-col gap-6 lg:w-[55%]">
             <p className="text-[#33323D]/80 text-[15px] leading-[30px] ">
               I’d love to hear about what you’re working on and how I could help.
               I’m currently looking for a new role and am open to a wide range of

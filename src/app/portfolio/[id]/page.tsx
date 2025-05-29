@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 import CTA from "@/app/components/CTA";
-import { link } from "fs";
 
 const portfolioData = [
   {

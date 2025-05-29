@@ -57,12 +57,14 @@ export const metadata: Metadata = {
     creator: "@bucheed",
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-32x32.png",
+    icon: "/logo.svg",
+    apple: "/logo.svg",
+    shortcut: "/logo.svg",
   },
   keywords: [
     "Daniel Okafor",
+    "Buchman",
+    "Bucheed",
     "Portfolio",
     "Software Developer",
     "Web Developer",

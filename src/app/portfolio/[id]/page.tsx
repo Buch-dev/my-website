@@ -10,6 +10,29 @@ import CTA from "@/app/components/CTA";
 const portfolioData = [
   {
     id: "1",
+    title: "Scoot",
+    description:
+      "This project required me to build a fully multipage responsive website to the designs provided. I used Next.js, along with Tailwind CSS for styling. The project also required me to implement animations and transitions using GSAP",
+    projectBackground:
+      "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+    mobileHeroImageUrl: "/images/portfolio/scoot-mobile.webp",
+    tabletHeroImageUrl: "/images/portfolio/scoot-tablet.webp",
+    desktopHeroImageUrl: "/images/portfolio/scoot-desktop.webp",
+    mobilePreviewImageUrl:
+      "/images/portfolio/scoot-mobile.webp",
+    tabletPreviewImageUrl:
+      "/images/portfolio/scoot-tablet.webp",
+    desktopPreviewImageUrl:
+      "/images/portfolio/scoot-desktop.webp",
+    mobilePreviewImageUrl2:
+      "/images/portfolio/scoot-mobile.webp",
+    tabletPreviewImageUrl2:
+      "/images/portfolio/scoot-tablet.webp",
+    desktopPreviewImageUrl2:
+      "/images/portfolio/scoot-desktop.webp",
+  },
+  {
+    id: "2",
     title: "Manage",
     description:
       "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -33,7 +56,7 @@ const portfolioData = [
       "/images/detail/desktop/image-manage-preview-2@2x.jpg",
   },
   {
-    id: "2",
+    id: "3",
     title: "Bookmark",
     description:
       "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
@@ -57,7 +80,7 @@ const portfolioData = [
       "/images/detail/desktop/image-bookmark-preview-2@2x.jpg",
   },
   {
-    id: "3",
+    id: "4",
     title: "Insure",
     description:
       "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
@@ -81,11 +104,11 @@ const portfolioData = [
       "/images/detail/desktop/image-insure-preview-2@2x.jpg",
   },
   {
-    id: "4",
+    id: "5",
     title: "Fylo",
     description:
       "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-    tools: "Interaction Design / Front End Development HTML / CSS / JS",
+    tools: "Interaction Design / Front End Development HTML / CSS / JS / React / Nextjs / GSAP",
     projectBackground:
       "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     mobileHeroImageUrl: "/images/detail/mobile/image-fylo-hero@2x.jpg",

@@ -16,6 +16,42 @@ function PortfolioPage() {
   const portfolioData = [
     {
       id: "1",
+      title: "Scoot",
+      description:
+        "This project required me to build a fully multipage responsive website to the designs provided. I used Next.js, along with Tailwind CSS for styling. The project also required me to implement animations and transitions using GSAP",
+      imageUrl: "/images/portfolio/scoot-tablet.webp",
+      desktopImageUrl:
+        "/images/portfolio/scoot-desktop.webp",
+    },
+    {
+      id: "2",
+      title: "Memory Game",
+      description:
+        "This project required me to build a fully responsive memory game using React. I used CSS for styling and implemented the game logic using JavaScript. The game features a timer, score tracking, and a reset button.",
+      imageUrl: "/images/portfolio/memory-game-desktop.webp",
+      desktopImageUrl:
+        "/images/portfolio/memory-game-tablet.webp",
+    },
+    {
+      id: "3",
+      title: "Tickect Generator",
+      description:
+        "This project required me to build a fully responsive ticket generator using React. I used CSS for styling and implemented the ticket generation logic using JavaScript. The project features a form to input ticket details and generates a printable ticket.",
+      imageUrl: "/images/portfolio/conference-generator.mobile.webp",
+      desktopImageUrl:
+        "/images/portfolio/conference-generator-desktop.webp",
+    },
+    {
+      id: "4",
+      title: "Product List with Cart",
+      description:
+        "This project required me to build a fully responsive product list with a cart using React. I used CSS for styling and implemented the cart functionality using JavaScript. The project features a product list, a cart, and the ability to add and remove items from the cart.",
+      imageUrl: "/images/portfolio/product-list-confirmation-page.webp",
+      desktopImageUrl:
+        "/images/portfolio/product-list-desktop.webp",
+    },
+    {
+      id: "5",
       title: "Manage",
       description:
         "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -24,7 +60,7 @@ function PortfolioPage() {
         "/images/portfolio/desktop/image-portfolio-manage@2x.jpg",
     },
     {
-      id: "2",
+      id: "6",
       title: "Bookmark",
       description:
         "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
@@ -33,7 +69,7 @@ function PortfolioPage() {
         "/images/portfolio/desktop/image-portfolio-bookmark@2x.jpg",
     },
     {
-      id: "3",
+      id: "7",
       title: "Insure",
       description:
         "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
@@ -42,7 +78,7 @@ function PortfolioPage() {
         "/images/portfolio/desktop/image-portfolio-insure@2x.jpg",
     },
     {
-      id: "4",
+      id: "8",
       title: "Fylo",
       description:
         "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",

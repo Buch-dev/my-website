@@ -6,34 +6,109 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 import CTA from "@/app/components/CTA";
+import { link } from "fs";
 
 const portfolioData = [
   {
     id: "1",
     title: "Scoot",
+    link: "https://scoot-website-nine.vercel.app/",
     description:
       "This project required me to build a fully multipage responsive website to the designs provided. I used Next.js, along with Tailwind CSS for styling. The project also required me to implement animations and transitions using GSAP",
     projectBackground:
       "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-    mobileHeroImageUrl: "/images/portfolio/scoot-mobile.webp",
-    tabletHeroImageUrl: "/images/portfolio/scoot-tablet.webp",
+    mobileHeroImageUrl: "/images/portfolio/scoot-desktop.webp",
+    tabletHeroImageUrl: "/images/portfolio/scoot-desktop.webp",
     desktopHeroImageUrl: "/images/portfolio/scoot-desktop.webp",
     mobilePreviewImageUrl:
-      "/images/portfolio/scoot-mobile.webp",
+      "/images/portfolio/scoot-tablet.webp",
     tabletPreviewImageUrl:
       "/images/portfolio/scoot-tablet.webp",
     desktopPreviewImageUrl:
-      "/images/portfolio/scoot-desktop.webp",
+      "/images/portfolio/scoot-tablet.webp",
     mobilePreviewImageUrl2:
       "/images/portfolio/scoot-mobile.webp",
     tabletPreviewImageUrl2:
-      "/images/portfolio/scoot-tablet.webp",
+      "/images/portfolio/scoot-mobile.webp",
     desktopPreviewImageUrl2:
-      "/images/portfolio/scoot-desktop.webp",
+      "/images/portfolio/scoot-mobile.webp",
   },
   {
     id: "2",
+    title: "Memory Game",
+    link: "https://memory-game-frontend-mentor.vercel.app/",
+    description:
+      "This project required me to build a fully responsive memory game using React. I used CSS for styling and implemented the game logic using JavaScript. The game features a timer, score tracking, and a reset button.",
+    projectBackground:
+      "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+    mobileHeroImageUrl: "/images/portfolio/memory-game-mobile.webp",
+    tabletHeroImageUrl: "/images/portfolio/memory-game-tablet.webp",
+    desktopHeroImageUrl: "/images/portfolio/memory-game-desktop.webp",
+    mobilePreviewImageUrl:
+      "/images/portfolio/memory-game-desktop.webp",
+    tabletPreviewImageUrl:
+      "/images/portfolio/memory-game-desktop.webp",
+    desktopPreviewImageUrl:
+      "/images/portfolio/memory-game-mobile.webp",
+    mobilePreviewImageUrl2:
+      "/images/portfolio/memory-game-mobile.webp",
+    tabletPreviewImageUrl2:
+      "/images/portfolio/memory-game-tablet.webp",
+    desktopPreviewImageUrl2:
+      "/images/portfolio/memory-game-tablet.webp",
+  },
+  {
+    id: "3",
+    title: "Ticket Generator",
+    link: "https://ticket-generator-blue.vercel.app/",
+    description:
+      "This project required me to build a fully responsive ticket generator using React. I used CSS for styling and implemented the ticket generation logic using JavaScript. The project features a form to input ticket details and generates a printable ticket.",
+    projectBackground:
+      "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+    mobileHeroImageUrl: "/images/portfolio/conference-generator-desktop.webp",
+    tabletHeroImageUrl: "/images/portfolio/conference-generator-desktop.webp",
+    desktopHeroImageUrl: "/images/portfolio/conference-generator-desktop.webp",
+    mobilePreviewImageUrl:
+      "/images/portfolio/conference-generator-desktop.webp",
+    tabletPreviewImageUrl:
+      "/images/portfolio/conference-generator-desktop.webp",
+    desktopPreviewImageUrl:
+      "/images/portfolio/conference-generator-desktop.webp",
+    mobilePreviewImageUrl2:
+      "/images/portfolio/conference-generator.mobile.webp",
+    tabletPreviewImageUrl2:
+      "/images/portfolio/conference-generator.mobile.webp",
+    desktopPreviewImageUrl2:
+      "/images/portfolio/conference-generator.mobile.webp",
+  },
+  {
+    id: "4",
+    title: "Product List with Cart",
+    link: "https://product-list-with-cart-ebon.vercel.app/",
+    description:
+      "This project required me to build a fully responsive product list with a cart using React. I used CSS for styling and implemented the cart functionality using JavaScript. The project features a product list, a cart, and the ability to add and remove items from the cart.",
+    projectBackground:
+      "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+    mobileHeroImageUrl: "/images/portfolio/product-list-desktop.webp",
+    tabletHeroImageUrl: "/images/portfolio/product-list-desktop.webp",
+    desktopHeroImageUrl: "/images/portfolio/product-list-desktop.webp",
+    mobilePreviewImageUrl:
+      "/images/portfolio/product-list-confirmation-page.webp",
+    tabletPreviewImageUrl:
+      "/images/portfolio/product-list-confirmation-page.webp",
+    desktopPreviewImageUrl:
+      "/images/portfolio/product-list-confirmation-page.webp",
+    mobilePreviewImageUrl2:
+      "/images/portfolio/product-list-mobile.webp",
+    tabletPreviewImageUrl2:
+      "/images/portfolio/product-list-mobile.webp",
+    desktopPreviewImageUrl2:
+      "/images/portfolio/product-list-mobile.webp",
+  },
+  {
+    id: "5",
     title: "Manage",
+    link: "/",
     description:
       "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
     tools: "Interaction Design / Front End Development HTML / CSS / JS",
@@ -56,8 +131,9 @@ const portfolioData = [
       "/images/detail/desktop/image-manage-preview-2@2x.jpg",
   },
   {
-    id: "3",
+    id: "6",
     title: "Bookmark",
+    link: "/",
     description:
       "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
     tools: "Interaction Design / Front End Development HTML / CSS / JS",
@@ -80,8 +156,9 @@ const portfolioData = [
       "/images/detail/desktop/image-bookmark-preview-2@2x.jpg",
   },
   {
-    id: "4",
+    id: "7",
     title: "Insure",
+    link: "/",
     description:
       "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
     tools: "Interaction Design / Front End Development HTML / CSS / JS",
@@ -104,8 +181,9 @@ const portfolioData = [
       "/images/detail/desktop/image-insure-preview-2@2x.jpg",
   },
   {
-    id: "5",
+    id: "8",
     title: "Fylo",
+    link: "/",
     description:
       "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
     tools: "Interaction Design / Front End Development HTML / CSS / JS / React / Nextjs / GSAP",
@@ -200,7 +278,7 @@ const ProjectDetails = ({ params }: { params: Promise<{ id: string }> }) => {
                 JS
               </p>
 
-              <Link href={"/"}>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
                 <RegularButton
                   className="px-8 py-[17px] border border-[#33323D] text-[#33323D] text-xs leading-normal tracking-[2px] w-fit hover:bg-[#33323D] hover:text-[#FAFAFA] transition-colors"
                   type="button"

@@ -34,7 +34,7 @@ function PortfolioPage() {
     },
     {
       id: "3",
-      title: "Tickect Generator",
+      title: "Ticket Generator",
       description:
         "This project required me to build a fully responsive ticket generator using React. I used CSS for styling and implemented the ticket generation logic using JavaScript. The project features a form to input ticket details and generates a printable ticket.",
       imageUrl: "/images/portfolio/conference-generator.mobile.webp",
